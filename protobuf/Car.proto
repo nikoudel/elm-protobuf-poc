@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package messages;
+
+message Car {
+  string make = 1;
+  string model = 2;
+  int32 registrationYear = 3;
+  int32 price = 4;
+  string ownerEmail = 5;
+}
+
+message Cars {
+    repeated Car cars = 1;
+}
