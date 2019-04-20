@@ -61,10 +61,10 @@ module Views =
                 link [
                     _rel  "stylesheet"
                     _type "text/css"
-                    _href "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" ]
+                    _href "//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" ]
                 script [
                     _defer
-                    _src "https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+                    _src "//use.fontawesome.com/releases/v5.8.1/js/all.js"
                     _integrity "sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
                     _crossorigin "anonymous" ] []
                 script [ _src elmScript ] []
