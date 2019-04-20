@@ -3,7 +3,6 @@ obj/
 .vs/
 protobuf/protoc/
 elm-stuff/
-Client/build/
 
 *.user
 Server/Server/wwwroot/app.js
