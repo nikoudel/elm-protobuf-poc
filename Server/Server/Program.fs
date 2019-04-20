@@ -57,7 +57,7 @@ module Views =
             head [] [
                 meta [ _charset "UTF-8" ] 
                 meta [ _name "viewport"; _content "width=device-width, initial-scale=1" ] 
-                title []  [ encodedText "server" ]
+                title []  [ encodedText "Elm & Protocol Buffers" ]
                 link [
                     _rel  "stylesheet"
                     _type "text/css"
