@@ -26,7 +26,7 @@ namespace Messages {
           string.Concat(
             "Cg5NZXNzYWdlcy5wcm90bxIIbWVzc2FnZXMiXwoDQ2FyEgwKBG1ha2UYASAB",
             "KAkSDQoFbW9kZWwYAiABKAkSGAoQcmVnaXN0cmF0aW9uWWVhchgDIAEoBRIN",
-            "CgVwcmljZRgEIAEoAhISCgpvd25lckVtYWlsGAUgASgJIjIKBENhcnMSDQoF",
+            "CgVwcmljZRgEIAEoARISCgpvd25lckVtYWlsGAUgASgJIjIKBENhcnMSDQoF",
             "ZXJyb3IYASABKAkSGwoEY2FycxgCIAMoCzINLm1lc3NhZ2VzLkNhcmIGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -113,9 +113,9 @@ namespace Messages {
 
     /// <summary>Field number for the "price" field.</summary>
     public const int PriceFieldNumber = 4;
-    private float price_;
+    private double price_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float Price {
+    public double Price {
       get { return price_; }
       set {
         price_ = value;
@@ -149,7 +149,7 @@ namespace Messages {
       if (Make != other.Make) return false;
       if (Model != other.Model) return false;
       if (RegistrationYear != other.RegistrationYear) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Price, other.Price)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Price, other.Price)) return false;
       if (OwnerEmail != other.OwnerEmail) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -160,7 +160,7 @@ namespace Messages {
       if (Make.Length != 0) hash ^= Make.GetHashCode();
       if (Model.Length != 0) hash ^= Model.GetHashCode();
       if (RegistrationYear != 0) hash ^= RegistrationYear.GetHashCode();
-      if (Price != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Price);
+      if (Price != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Price);
       if (OwnerEmail.Length != 0) hash ^= OwnerEmail.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -187,9 +187,9 @@ namespace Messages {
         output.WriteRawTag(24);
         output.WriteInt32(RegistrationYear);
       }
-      if (Price != 0F) {
-        output.WriteRawTag(37);
-        output.WriteFloat(Price);
+      if (Price != 0D) {
+        output.WriteRawTag(33);
+        output.WriteDouble(Price);
       }
       if (OwnerEmail.Length != 0) {
         output.WriteRawTag(42);
@@ -212,8 +212,8 @@ namespace Messages {
       if (RegistrationYear != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RegistrationYear);
       }
-      if (Price != 0F) {
-        size += 1 + 4;
+      if (Price != 0D) {
+        size += 1 + 8;
       }
       if (OwnerEmail.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OwnerEmail);
@@ -238,7 +238,7 @@ namespace Messages {
       if (other.RegistrationYear != 0) {
         RegistrationYear = other.RegistrationYear;
       }
-      if (other.Price != 0F) {
+      if (other.Price != 0D) {
         Price = other.Price;
       }
       if (other.OwnerEmail.Length != 0) {
@@ -267,8 +267,8 @@ namespace Messages {
             RegistrationYear = input.ReadInt32();
             break;
           }
-          case 37: {
-            Price = input.ReadFloat();
+          case 33: {
+            Price = input.ReadDouble();
             break;
           }
           case 42: {

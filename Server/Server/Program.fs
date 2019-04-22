@@ -93,7 +93,7 @@ let validateCar (car: Messages.Car) =
         Some "Make must not be empty"
     else if car.Model = "" then
         Some "Model must not be empty"
-    else if car.Price = 0.0f then
+    else if car.Price = 0.0 then
         Some "Price must not be zero"
     else if car.RegistrationYear < 1800 || car.RegistrationYear > 2100 then
         Some "Invalid registration year"

@@ -74,7 +74,7 @@ carDecoder =
         [ Decode.optional 1 Decode.string setMake
         , Decode.optional 2 Decode.string setModel
         , Decode.optional 3 Decode.int32 setRegistrationYear
-        , Decode.optional 4 Decode.float setPrice
+        , Decode.optional 4 Decode.double setPrice
         , Decode.optional 5 Decode.string setOwnerEmail
         ]
 
@@ -97,7 +97,7 @@ toCarEncoder model =
         [ ( 1, Encode.string model.make )
         , ( 2, Encode.string model.model )
         , ( 3, Encode.int32 model.registrationYear )
-        , ( 4, Encode.float model.price )
+        , ( 4, Encode.double model.price )
         , ( 5, Encode.string model.ownerEmail )
         ]
 
